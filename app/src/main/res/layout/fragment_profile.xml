@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.ProfileFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout_profile_frag"
+        android:background="@android:color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/profile_fragment_username"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="username"
+                   android:textSize="18dp"
+                   android:textStyle="bold"
+                   android:textColor="@android:color/black"
+                   android:layout_centerVertical="true">
+
+               </TextView>
+
+                <ImageView
+                    android:id="@+id/options_view"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/options"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar_layout_profile_frag">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+              <LinearLayout
+                  android:id="@+id/top_bar"
+                  android:layout_width="401dp"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:padding="16dp">
+
+                  <de.hdodenhof.circleimageview.CircleImageView
+                      android:id="@+id/pro_image_profile_frag"
+                      android:layout_width="120dp"
+                      android:layout_height="120dp"
+                      android:src="@drawable/profile">
+
+                  </de.hdodenhof.circleimageview.CircleImageView>
+
+                  <LinearLayout
+                      android:layout_width="190dp"
+                      android:layout_height="90dp"
+                      android:layout_marginLeft="60dp"
+                      android:layout_marginTop="15dp"
+                      android:orientation="vertical">
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:orientation="horizontal">
+
+                          <LinearLayout
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center"
+                              android:orientation="vertical">
+
+                              <TextView
+                                  android:id="@+id/total_posts"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="0"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="12dp"
+                                  android:textStyle="bold">
+
+
+                              </TextView>
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="Posts"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="12dp">
+
+                              </TextView>
+
+
+                          </LinearLayout>
+
+                          <LinearLayout
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center"
+                              android:layout_marginLeft="7dp"
+                              android:orientation="vertical">
+
+                              <TextView
+                                  android:id="@+id/total_followers"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="0"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="12dp"
+                                  android:textStyle="bold">
+
+
+                              </TextView>
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="Followers"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="12dp">
+
+                              </TextView>
+
+
+                          </LinearLayout>
+
+                          <LinearLayout
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center"
+                              android:layout_marginLeft="7dp"
+                              android:orientation="vertical">
+
+                              <TextView
+                                  android:id="@+id/total_following"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="0"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="12dp"
+                                  android:textStyle="bold">
+
+
+                              </TextView>
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="Following"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="12dp">
+
+                              </TextView>
+
+
+                          </LinearLayout>
+
+                      </LinearLayout>
+
+                      <Button
+                          android:id="@+id/edit_account_settings_btn"
+                          android:layout_width="170dp"
+                          android:layout_height="32dp"
+                          android:layout_marginLeft="1dp"
+                          android:layout_marginTop="2dp"
+                          android:background="@drawable/buttons_background"
+                          android:text="Edit Profile"
+                          android:textAllCaps="false">
+
+                      </Button>
+
+                  </LinearLayout>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/mid_bar"
+                  android:padding="12dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:id="@+id/full_name_profile_frag"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Full Name"
+                      android:textSize="13dp"
+                      android:textStyle="bold"
+                      android:textColor="@android:color/black">
+
+
+
+                  </TextView>
+
+                  <TextView
+                      android:id="@+id/bio_profile_frag"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Bio"
+                      android:textSize="13dp"
+                      android:textColor="@android:color/black">
+
+                  </TextView>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:background="@drawable/button_black_background"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp">
+
+                  <ImageButton
+                      android:id="@+id/images_grid_view_btn"
+                      android:layout_width="1dp"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/grid"
+                      android:layout_weight="1"
+                      style="?android:attr/buttonBarButtonStyle">
+
+                  </ImageButton>
+
+                  <ImageButton
+                      android:id="@+id/images_save_btn"
+                      android:layout_width="1dp"
+                      android:layout_height="49dp"
+                      android:scaleType="fitCenter"
+                      android:src="@drawable/save_large_icon"
+                      android:layout_weight="1"
+                      style="?android:attr/buttonBarButtonStyle">
+
+                  </ImageButton>
+
+              </LinearLayout>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recycler_view_upload_pic"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+              </androidx.recyclerview.widget.RecyclerView>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recycler_view_saved_pic"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:visibility="gone">
+
+              </androidx.recyclerview.widget.RecyclerView>
+
+          </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

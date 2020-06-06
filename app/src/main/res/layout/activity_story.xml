@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryActivity">
+
+
+    <ImageView
+        android:id="@+id/image_story"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile"
+        android:contentDescription="@null">
+
+    </ImageView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/reverse"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </View>
+
+        <View
+            android:id="@+id/skip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </View>
+
+    </LinearLayout>
+
+
+    <jp.shts.android.storiesprogressview.StoriesProgressView
+        android:id="@+id/stories_progress"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="top"
+        android:layout_marginTop="8dp">
+
+    </jp.shts.android.storiesprogressview.StoriesProgressView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="8dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/story_profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/story_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/story_profile_image"
+            android:layout_marginStart="5dp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_seen"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#20000000"
+        android:padding="4dp"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="seen by"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/seen_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/story_delete"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:text="Delete"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:background="#20000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+    </TextView>
+
+
+</RelativeLayout>
